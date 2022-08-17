@@ -114,7 +114,15 @@ class TicTacToe:
         print("Please choose the board grid, choose one among them  !! \n \n")
 
         # create board and start the game
-        size = int(input("Enter board size between 3 and 5: "))
+        size = input("Enter board size between 3 and 5: ")
+        
+        # bad input such as words
+        if not size.isnumeric():
+            print("Invalid board size")
+            exit()        
+        size = int(size)
+
+        # form a board, exit if it is empty
         self._create_board(size)
         if not self.board: exit()
 

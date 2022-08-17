@@ -8,6 +8,7 @@ class BoardCheck(unittest.TestCase):
 
     def test_good_size(self):
         """Test to check if the board accepts sizes 3 to 5 inclusive
+        The function only takes in integers, so bad strings test is not included
         """
         for size in range(3, 6):
             tic = TicTacToe()
